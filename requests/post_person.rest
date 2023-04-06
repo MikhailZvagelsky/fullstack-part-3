@@ -2,7 +2,24 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-  "id": 10,
-  "name": "Certis Landis", 
+  "name": "Certis Blank", 
   "number": "040-123-45-67"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "040-123-45-67"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Certis Blank"
 }

@@ -61,8 +61,23 @@ app.delete('/api/persons/:id', (request, response) => {
 
 app.post('/api/persons', (request, response) => {
   const person = request.body;
-  person.id = generatePersonId();
-  persons.push(person);
+  if (!person.name) {
+    return response.status(400).json({error: 'person name is required'});
+  }
+  if (!person.number) {
+    return response.status(400).json({error: 'person number is required'});
+  }
+  const existingPerson = persons.find(p => p.name === person.name);
+  if (existingPerson) {
+    return response.status(400).json({error: 'name must be unique'});
+  }
+  const newPerson = {
+    id: generatePersonId(),
+    name: person.name,
+    number: person.number
+  };
+  persons.push(newPerson);
+  response.json(newPerson);
 });
 
 const PORT = 3001;
