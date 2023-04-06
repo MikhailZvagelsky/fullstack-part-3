@@ -24,6 +24,19 @@ let persons = [
   }
 ];
 
+app.get('/info', (request, response) => {
+  const peopleCount = persons.length;
+  const dateTime = new Date();
+  response.send(`
+  <div>
+    Phonebook has info for ${peopleCount} people
+  </div>
+  <div>
+    ${dateTime}
+  </div>
+  `);
+});
+
 app.get('/api/persons', (request, response) => {
   response.json(persons);
 });
