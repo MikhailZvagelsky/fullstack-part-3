@@ -4,7 +4,13 @@ const morgan = require('morgan');
 const app = express();
 
 app.use(express.json());
-app.use(morgan('tiny'));
+
+morgan.token('request_body', function(req, res) {
+  return JSON.stringify(req.body);
+}); 
+const logFormat = ':method :url :status :res[content-length] - :response-time ms :request_body';
+const loggingMiddleware = morgan(logFormat);
+app.use(loggingMiddleware);
 
 let persons = [
   { 
