@@ -1,5 +1,5 @@
-# Full Stack open
+# Backend of the 'Phonebook' application
 
-## Part 3 Programming a server with NodeJS and Express
+## Node version
 
 Use node version 18.15.0 in this project.
