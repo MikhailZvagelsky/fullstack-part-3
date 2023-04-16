@@ -26,7 +26,7 @@ nvm use 18.15.0
 
 ## Build frontend
 
-The frontend project is `..`
+The frontend project folder is `../fullstack-part-3-frontend`.
 
 ## Deploy to Fly.io
 
