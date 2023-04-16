@@ -8,6 +8,16 @@ Content-Type: application/json
 
 ###
 
+POST https://phonebook-april-2023.fly.dev/api/persons
+Content-Type: application/json
+
+{
+  "name": "Certis Blank", 
+  "number": "040-123-45-67"
+}
+
+###
+
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
