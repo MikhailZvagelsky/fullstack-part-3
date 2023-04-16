@@ -1,8 +1,32 @@
 # Backend of the 'Phonebook' application
 
+## Project structure
+
+The `frontend-build` folder contains the application frontend build,
+copied from the `../fullstack-part-3-frontend/build`.
+
+Build frontend and copy:
+
+```
+npm run build:ui
+```
+
+Build frontend and deploy to Fly.io:
+
+```
+npm run deploy:full
+```
+
 ## Node version
 
-Use node v
+This project uses node version 18.15.0.
+```
+nvm use 18.15.0
+```
+
+## Build frontend
+
+The frontend project is `..`
 
 ## Deploy to Fly.io
 
@@ -27,6 +51,6 @@ flyctl ping -o personal
 
 # App url
 
-Created app 'phonebook-april-2023' in organization 'personal'
 Admin URL: https://fly.io/apps/phonebook-april-2023
+
 Hostname: phonebook-april-2023.fly.dev
